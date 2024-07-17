@@ -10,3 +10,5 @@ ellis:
   - ["nalu-wind%gcc", "/data/ssd1/home/jrood/exawind/golds/current/nalu-wind/gcc-cpu"]
   - ["amr-wind+cuda%gcc", "/data/ssd1/home/jrood/exawind/golds/current/amr-wind/gcc-gpu"]
   - ["nalu-wind+cuda%gcc", "/data/ssd1/home/jrood/exawind/golds/current/nalu-wind/gcc-gpu"]
+  - ["pelec%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelec/gcc-cpu"]
+  - ["pelelmex%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/gcc-cpu"]
