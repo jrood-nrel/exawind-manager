@@ -16,9 +16,9 @@ packages:
   mpi:
     require: "cray-mpich@8.1.28"
   blas:
-    require: "netlib-lapack"
+    require: "openblas"
   lapack:
-    require: "netlib-lapack"
+    require: "openblas"
   all:
     prefer:
       - "%gcc"
