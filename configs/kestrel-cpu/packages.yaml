@@ -3,7 +3,7 @@ packages:
     require: "@=8.1.28"
     buildable: false
     externals:
-      - spec: "cray-mpich@=8.1.28%oneapi@2023.2.0"
+      - spec: "cray-mpich@=8.1.28%intel@2023.2.0"
         prefix: /opt/cray/pe/mpich/8.1.28/ofi/intel/2022.1
         modules:
           - libfabric/1.15.2.0
@@ -16,10 +16,10 @@ packages:
   mpi:
     require: "cray-mpich@8.1.28"
   blas:
-    require: "openblas"
+    require: "netlib-lapack"
   lapack:
-    require: "openblas"
+    require: "netlib-lapack"
   all:
     prefer:
-      - "%gcc"
+      - "%intel"
       - "build_type=Release"
