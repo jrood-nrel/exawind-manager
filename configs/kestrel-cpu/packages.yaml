@@ -14,11 +14,27 @@ packages:
   boost:
     require: "@=1.80.0"
   mpi:
-    require: "cray-mpich@8.1.28"
+    require: "cray-mpich@8.1.28%intel"
   blas:
     require: "netlib-lapack"
   lapack:
     require: "netlib-lapack"
+  python:
+    require: "%gcc"
+  netlib-scalapack:
+    require: "~shared+pic%intel"
+  netlib-lapack:
+    require: "~shared+pic%intel"
+  diffutils:
+    require: "%gcc"
+  tar:
+    require: "%gcc"
+  binutils:
+    require: "%gcc"
+  gettext:
+    require: "%gcc"
+  findutils:
+    require: "%gcc"
   all:
     prefer:
       - "%intel"
