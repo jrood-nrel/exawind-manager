@@ -19,6 +19,14 @@ packages:
     require: "netlib-lapack"
   lapack:
     require: "netlib-lapack"
+  xz:
+    require: "libs=static"
+  libiconv:
+    require: "libs=static"
+  zstd:
+    require: "libs=static"
+  binutils:
+    require: "libs=static"
   all:
     prefer:
       - "%oneapi"
