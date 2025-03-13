@@ -24,3 +24,4 @@ packages:
       - "%oneapi"
       - "build_type=Release"
       - "~shared"
+      - "libs=static"
