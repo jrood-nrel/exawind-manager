@@ -23,7 +23,10 @@ packages:
     require: "~shared+pic"
   netlib-lapack:
     require: "~shared+pic"
+  dbcsr:
+    require: "~shared"
   all:
     prefer:
       - "%gcc"
       - "build_type=Release"
+      - "~shared"
