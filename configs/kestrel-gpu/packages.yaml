@@ -8,6 +8,7 @@ packages:
         modules:
           - openmpi/main-gpu
           - libfabric/lnx
+          - cuda/12.3
   cuda:
     require: "@=12.3"
     buildable: false
