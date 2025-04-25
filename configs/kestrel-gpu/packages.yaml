@@ -1,18 +1,18 @@
 packages:
-  cray-mpich:
-    require: "@=8.1.28"
+  openmpi:
+    require: "@=5.1"
     buildable: false
     externals:
-      - spec: "cray-mpich@=8.1.28%gcc@12.1.0"
-        prefix: /opt/cray/pe/mpich/8.1.28/ofi/gnu/10.3
+      - spec: "openmpi@=5.1%gcc@12.3.0"
+        prefix: /kfs2/projects/hpcapps/warsalan/libfabric/gpu_04-25/ompi/build
         modules:
-          - libfabric/1.15.2.0
+          - openmpi/main-gpu
   cuda:
-    require: "@=12.4.1"
+    require: "@=12.3"
   boost:
     require: "@=1.80.0"
   mpi:
-    require: "cray-mpich@8.1.28"
+    require: "openmpi@5.1"
   blas:
     require: "netlib-lapack"
   lapack:

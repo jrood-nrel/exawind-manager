@@ -1,11 +1,11 @@
 compilers:
   - compiler:
-      spec: gcc@12.1.0
+      spec: gcc@12.3.0
       paths:
-        cc: /opt/rh/gcc-toolset-12/root/bin/gcc
-        cxx: /opt/rh/gcc-toolset-12/root/bin/g++
-        f77: /opt/rh/gcc-toolset-12/root/bin/gfortran
-        fc: /opt/rh/gcc-toolset-12/root/bin/gfortran
+        cc: /nopt/nrel/apps/gpu_stack/compilers/06-24/linux-rhel8-zen4/gcc-12.3.0/gcc-12.3.0-bwbarmbu4cyrk36bzl62iteel6dnsr5r/bin/gcc
+        cxx: /nopt/nrel/apps/gpu_stack/compilers/06-24/linux-rhel8-zen4/gcc-12.3.0/gcc-12.3.0-bwbarmbu4cyrk36bzl62iteel6dnsr5r/bin/g++
+        f77: /nopt/nrel/apps/gpu_stack/compilers/06-24/linux-rhel8-zen4/gcc-12.3.0/gcc-12.3.0-bwbarmbu4cyrk36bzl62iteel6dnsr5r/bin/gfortran
+        fc: /nopt/nrel/apps/gpu_stack/compilers/06-24/linux-rhel8-zen4/gcc-12.3.0/gcc-12.3.0-bwbarmbu4cyrk36bzl62iteel6dnsr5r/bin/gfortran
       flags: {}
       operating_system: rhel8
       target: x86_64
