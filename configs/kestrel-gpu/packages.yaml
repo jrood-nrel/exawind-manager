@@ -7,6 +7,7 @@ packages:
         prefix: /kfs2/projects/hpcapps/warsalan/libfabric/gpu_04-25/ompi/build
         modules:
           - openmpi/main-gpu
+          - libfabric/lnx
   cuda:
     require: "@=12.3"
     buildable: false
