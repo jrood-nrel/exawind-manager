@@ -9,6 +9,8 @@ compilers:
       flags: {}
       operating_system: rhel8
       target: x86_64
-      modules: []
+      modules:
+        - openmpi/main-gpu
+        - libfabric/lnx
       extra_rpaths: []
       environment: {}
