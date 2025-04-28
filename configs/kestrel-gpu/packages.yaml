@@ -8,15 +8,14 @@ packages:
         modules:
           - openmpi/main-gpu
           - libfabric/lnx
-          - cuda/12.3
   cuda:
     require: "@=12.3"
-    buildable: false
-    externals:
-      - spec: "cuda@=12.3%gcc@12.3.0"
-        prefix: /nopt/cuda/12.3
-        modules:
-          - cuda/12.3
+    #buildable: false
+    #externals:
+    #  - spec: "cuda@=12.3%gcc@12.3.0"
+    #    prefix: /nopt/cuda/12.3
+    #    modules:
+    #      - cuda/12.3
   boost:
     require: "@=1.80.0"
   mpi:

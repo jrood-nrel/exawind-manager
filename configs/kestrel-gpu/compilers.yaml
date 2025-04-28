@@ -12,7 +12,5 @@ compilers:
       modules:
         - openmpi/main-gpu
         - libfabric/lnx
-        - cuda/12.3
-      extra_rpaths:
-        - /lib64
+      extra_rpaths: []
       environment: {}
