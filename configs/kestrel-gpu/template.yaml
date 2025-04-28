@@ -4,5 +4,5 @@ spack:
     reuse: false 
   view: false
   specs:
-    - 'exawind~amr_wind_gpu~nalu_wind_gpu~cuda@master ^amr-wind@main ^nalu-wind@master'
-    - 'exawind+amr_wind_gpu~nalu_wind_gpu+cuda@master cuda_arch=90 ^amr-wind@main ^nalu-wind@master'
+    - 'exawind~amr_wind_gpu~nalu_wind_gpu~cuda@master ^amr-wind@main ^nalu-wind@master ^parallel-netcdf~shared'
+    - 'exawind+amr_wind_gpu~nalu_wind_gpu+cuda@master cuda_arch=90 ^amr-wind@main ^nalu-wind@master ^parallel-netcdf~shared'
