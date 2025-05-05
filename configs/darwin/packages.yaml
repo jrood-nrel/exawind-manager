@@ -1,4 +1,10 @@
 packages:
+  cmake:
+    require: "@=4.0.1"
+    buildable: false
+    externals:
+      - spec: "cmake@4.0.1"
+        prefix: /opt/homebrew/Cellar/cmake/4.0.1
   mpi:
     require: "mpich"
   hypre:
