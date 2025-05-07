@@ -1,0 +1,24 @@
+packages:
+  cray-mpich:
+    require: "@=8.1.28"
+    buildable: false
+    externals:
+      - spec: "cray-mpich@=8.1.28%gcc@12.1.0"
+        prefix: /opt/cray/pe/mpich/8.1.28/ofi/gnu/10.3
+        modules:
+          - libfabric/1.15.2.0
+  cuda:
+    require: "@=12.4.1"
+  boost:
+    require: "@=1.80.0"
+  mpi:
+    require: "cray-mpich@8.1.28"
+  blas:
+    require: "netlib-lapack"
+  lapack:
+    require: "netlib-lapack"
+  all:
+    prefer:
+      - "%gcc"
+      - "build_type=Release"
+      - "cuda_arch=90"

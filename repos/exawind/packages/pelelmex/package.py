@@ -3,6 +3,7 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
+from spack import *
 from spack.package import *
 from spack.pkg.exawind.ctest_package import *
 
@@ -76,7 +77,7 @@ class Pelelmex(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
         spec = self.spec
         if spec.satisfies("+asan"):
             env.append_flags("CXXFLAGS", "-fsanitize=address -fno-omit-frame-pointer")
-            env.set("LSAN_OPTIONS", "suppressions={0}".format(join_path(self.package_dir, "sup.asan")))
+            env.set("LSAN_OPTIONS", "verbosity=1:log_threads=1:suppressions={0}".format(join_path(self.package_dir, "sup.asan")))
 
     def cmake_args(self):
         define = self.define

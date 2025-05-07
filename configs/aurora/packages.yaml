@@ -1,19 +1,13 @@
 packages:
   mpich:
-    require: "@52.2"
+    require: "@4.3.0"
     buildable: false
     externals:
-      - spec: "mpich@52.2"
-        prefix: /soft/restricted/CNDA/updates/mpich/52.2/mpich-ofi-all-icc-default-pmix-gpu-drop52
+      - spec: "mpich@4.3.0"
+        prefix: /opt/aurora/24.180.3/spack/unified/0.8.0/install/linux-sles15-x86_64/oneapi-2024.07.30.002/mpich-4.3.0rc3-fzmrfta
         modules:
-          - mpich/52.2/icc-all-pmix-gpu 
-          - libfabric/1.15.2.0
-  mpi:
-    require: "mpich@52.2"
-  blas:
-    require: "openblas"
-  lapack:
-    require: "openblas"
+          - mpich/opt/4.3.0rc3
+          - libfabric/1.20.1
   all:
-    require:
-      - "%oneapi@2023.2"
+    prefer:
+      - "%oneapi@2025.0"
