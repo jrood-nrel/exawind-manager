@@ -56,6 +56,7 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     depends_on("masa", when="+masa")
     depends_on("ascent~mpi", when="+ascent~mpi")
     depends_on("ascent+mpi", when="+ascent+mpi")
+    depends_on("py-nose")
     depends_on("py-matplotlib", when="+masa")
     depends_on("py-pandas", when="+masa")
 
