@@ -52,6 +52,7 @@ class Pelelmex(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     depends_on("mpi", when="+mpi")
     depends_on("hdf5~mpi", when="+hdf5~mpi")
     depends_on("hdf5+mpi", when="+hdf5+mpi")
+    depends_on("hdf5@:1.14.4-3", when="+hdf5")
     depends_on("h5z-zfp", when="+hdf5")
     depends_on("zfp", when="+hdf5")
     depends_on("ascent~mpi", when="+ascent~mpi")
