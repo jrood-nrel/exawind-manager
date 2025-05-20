@@ -8,7 +8,7 @@ spack:
     - pelelmex+hdf5%gcc
     - pelec+hdf5+cuda%gcc cuda_arch=80
     - pelelmex+hdf5+cuda%gcc cuda_arch=80
-    - pelec+hdf5+masa+asan%clang
-    - pelelmex+hdf5+asan%clang
-    - pelec+hdf5+masa%clang
-    - pelelmex+hdf5%clang
+    - pelec+hdf5+masa+asan%llvm
+    - pelelmex+hdf5+asan%llvm
+    - pelec+hdf5+masa%llvm
+    - pelelmex+hdf5%llvm
