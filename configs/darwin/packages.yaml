@@ -7,14 +7,13 @@ packages:
         prefix: /opt/homebrew/Cellar/cmake/4.0.1
   mpi:
     require: "mpich"
-  hypre:
-    require: "+shared"
   blas:
     require: "openblas"
   lapack:
     require: "openblas"
-  all:
-    require:
-      - "%apple-clang"
-    prefer:
-      - "build_type=Release"
+  c:
+    require: "apple-clang"
+  cxx:
+    require: "apple-clang"
+  fortran:
+    require: "gcc"
