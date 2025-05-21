@@ -4,9 +4,9 @@
 ellis:
   - ["pelec+cuda%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelec/gcc-gpu"]
   - ["pelelmex+cuda%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/gcc-gpu"]
-  - ["pelec+asan%clang", "/data/ssd1/home/jrood/combustion/golds/current/pelec/clang-cpu-asan"]
-  - ["pelelmex+asan%clang", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/clang-cpu-asan"]
+  - ["pelec+asan%llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelec/clang-cpu-asan"]
+  - ["pelelmex+asan%llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/clang-cpu-asan"]
   - ["pelec%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelec/gcc-cpu"]
   - ["pelelmex%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/gcc-cpu"]
-  - ["pelec%clang", "/data/ssd1/home/jrood/combustion/golds/current/pelec/clang-cpu"]
-  - ["pelelmex%clang", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/clang-cpu"]
+  - ["pelec%llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelec/clang-cpu"]
+  - ["pelelmex%llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/clang-cpu"]
