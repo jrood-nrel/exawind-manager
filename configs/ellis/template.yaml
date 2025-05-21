@@ -4,11 +4,11 @@ spack:
     reuse: false
   view: false
   specs:
-    - pelec+hdf5+masa%gcc
-    - pelelmex+hdf5%gcc
-    - pelec+hdf5+cuda cuda_arch=80 %gcc
-    - pelelmex+hdf5+cuda cuda_arch=80 %gcc
-    - pelec+hdf5+masa+asan%llvm
-    - pelelmex+hdf5+asan%llvm
-    - pelec+hdf5+masa%llvm
-    - pelelmex+hdf5%llvm
+    - pelec+hdf5+masa^gcc
+    - pelelmex+hdf5^gcc
+    - pelec+hdf5+cuda cuda_arch=80 ^gcc
+    - pelelmex+hdf5+cuda cuda_arch=80 ^gcc
+    - pelec+hdf5+masa+asan^llvm
+    - pelelmex+hdf5+asan^llvm
+    - pelec+hdf5+masa^llvm
+    - pelelmex+hdf5^llvm
