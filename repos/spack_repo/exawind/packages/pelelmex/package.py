@@ -51,6 +51,8 @@ class Pelelmex(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     variant("sycl", default=False, description="Enable SYCL backend")
     variant("hypre", default=False, description="Enable hypre integration")
 
+    depends_on("c", type="build")
+    depends_on("cxx", type="build")
     depends_on("mpi", when="+mpi")
     depends_on("hdf5~mpi", when="+hdf5~mpi")
     depends_on("hdf5+mpi", when="+hdf5+mpi")

@@ -49,6 +49,8 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     variant("hdf5", default=False, description="Enable HDF5 plots with ZFP compression")
     variant("sycl", default=False, description="Enable SYCL backend")
 
+    depends_on("c", type="build")
+    depends_on("cxx", type="build")
     depends_on("mpi", when="+mpi")
     depends_on("hdf5~mpi", when="+hdf5~mpi")
     depends_on("hdf5+mpi", when="+hdf5+mpi")
