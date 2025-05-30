@@ -44,7 +44,7 @@ do
   copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
 
   #~cuda%gcc
-  SPEC=${APP}~cuda%gcc^cmake%gcc
+  SPEC=${APP}~cuda%gcc
   GOLD_SPEC_DIR=gcc-cpu
   copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
 
