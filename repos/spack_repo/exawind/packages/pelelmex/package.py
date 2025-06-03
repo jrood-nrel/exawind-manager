@@ -120,6 +120,7 @@ class Pelelmex(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
             args.append(define("HDF5_IS_PARALLEL", spec.satisfies("+mpi")))
 
         if spec.satisfies("+cuda"):
+            args.append(define("CMAKE_CUDA_HOST_COMPILER", spack_cxx))
             amrex_arch = [
                 "{0:.1f}".format(float(i) / 10.0) for i in spec.variants["cuda_arch"].value
             ]
