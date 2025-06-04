@@ -77,6 +77,8 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
         if spec.satisfies("+asan"):
             env.append_flags("CXXFLAGS", "-fsanitize=address -fno-omit-frame-pointer")
             env.set("LSAN_OPTIONS", "suppressions={0}".format(join_path(self.package_dir, "sup.asan")))
+        if self.spec.satisfies("+cuda"):
+            env.set("CUDAHOSTCXX", spack_cxx)
 
     def cmake_args(self):
         define = self.define
@@ -113,7 +115,6 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
             args.append(define("HDF5_IS_PARALLEL", spec.satisfies("+mpi")))
 
         if spec.satisfies("+cuda"):
-            args.append(define("CMAKE_CUDA_HOST_COMPILER", spack_cxx))
             amrex_arch = [
                 "{0:.1f}".format(float(i) / 10.0) for i in spec.variants["cuda_arch"].value
             ]
