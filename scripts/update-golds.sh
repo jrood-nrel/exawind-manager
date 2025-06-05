@@ -18,9 +18,9 @@ copy() {
   GOLD_SPEC_DIR=${2}
   GOLD_DIR=${3}
 
-  SPEC_DIR=$(spack location -i ${SPEC})
   echo ""
   echo "Copying ${SPEC} golds..."
+  SPEC_DIR=$(spack location -i ${SPEC})
   cmd "rm -r ${GOLD_DIR}/${GOLD_SPEC_DIR}/*"
   cmd "cp -R ${SPEC_DIR}/golds/Linux ${GOLD_DIR}/${GOLD_SPEC_DIR}/"
 }
