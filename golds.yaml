@@ -2,11 +2,11 @@
 # This allows us to match specs to golds based on what they satisfy in the environment
 # Specs should be ordered from most to least specific per platform
 ellis:
-  - ["pelec+cuda^gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelec/gcc-gpu"]
-  - ["pelec~cuda^gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelec/gcc-cpu"]
-  - ["pelec+asan^llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelec/clang-cpu-asan"]
-  - ["pelec~asan^llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelec/clang-cpu"]
-  - ["pelelmex+cuda^gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/gcc-gpu"]
-  - ["pelelmex~cuda^gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/gcc-cpu"]
-  - ["pelelmex+asan^llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/clang-cpu-asan"]
-  - ["pelelmex~asan^llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/clang-cpu"]
+  - ["pelec+cuda%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelec/gcc-gpu"]
+  - ["pelec~cuda%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelec/gcc-cpu"]
+  - ["pelec+asan%llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelec/clang-cpu-asan"]
+  - ["pelec~asan%llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelec/clang-cpu"]
+  - ["pelelmex+cuda%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/gcc-gpu"]
+  - ["pelelmex~cuda%gcc", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/gcc-cpu"]
+  - ["pelelmex+asan%llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/clang-cpu-asan"]
+  - ["pelelmex~asan%llvm", "/data/ssd1/home/jrood/combustion/golds/current/pelelmex/clang-cpu"]
