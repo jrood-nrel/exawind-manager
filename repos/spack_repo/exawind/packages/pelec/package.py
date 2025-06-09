@@ -61,9 +61,9 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     depends_on("ascent~mpi", when="+ascent~mpi")
     depends_on("ascent+mpi", when="+ascent+mpi")
     depends_on("py-nose")
+    depends_on("py-numpy@2:")
+    depends_on("py-pandas")
     depends_on("py-matplotlib", when="+masa")
-    depends_on("py-numpy@2:", when="+masa")
-    depends_on("py-pandas", when="+masa")
 
     for arch in CudaPackage.cuda_arch_values:
         depends_on("ascent+cuda cuda_arch=%s" % arch, when="+ascent+cuda cuda_arch=%s" % arch)
