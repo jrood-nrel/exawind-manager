@@ -34,4 +34,4 @@ prune_envs() {
 cmd "prune_envs"
 
 packages_to_test="pelec pelelmex"
-cmd "time ${EXAWIND_MANAGER}/scripts/deploy.py --depfile --daily --cdash ${packages_to_test} --ranks ${nranks} --overwrite --regression_tests ${packages_to_test}"
+cmd "time ${EXAWIND_MANAGER}/scripts/deploy.py --daily --cdash ${packages_to_test} --ranks ${nranks} --overwrite --regression_tests ${packages_to_test}"
