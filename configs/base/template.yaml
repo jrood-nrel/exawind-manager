@@ -1,3 +1,4 @@
 spack:
   specs:
-  - exawind
+  - pelec+hdf5+masa
+  - pelelmex+hdf5
