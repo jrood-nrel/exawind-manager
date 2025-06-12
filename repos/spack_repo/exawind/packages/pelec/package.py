@@ -40,13 +40,13 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
         multi=False
     )
     variant("ascent", default=False, description="Enable Ascent integration")
-    variant("masa", default=False, description="Enable MASA integration")
+    variant("masa", default=True, description="Enable MASA integration")
     variant("mpi", default=True, description="Enable MPI support")
     variant("openmp", default=False, description="Enable OpenMP for CPU builds")
-    variant("particles", default=False, description="Enable AMReX particles")
+    variant("particles", default=True, description="Enable AMReX particles")
     variant("shared", default=True, description="Build shared libraries")
     variant("tiny_profile", default=True, description="Activate tiny profile")
-    variant("hdf5", default=False, description="Enable HDF5 plots with ZFP compression")
+    variant("hdf5", default=True, description="Enable HDF5 plots with ZFP compression")
     variant("sycl", default=False, description="Enable SYCL backend")
 
     depends_on("c", type="build")

@@ -1,4 +1,4 @@
 spack:
   specs:
-  - pelec+hdf5+masa
-  - pelelmex+hdf5
+  - pelec
+  - pelelmex
