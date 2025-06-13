@@ -40,7 +40,7 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
         multi=False
     )
     variant("ascent", default=False, description="Enable Ascent integration")
-    variant("masa", default=True, description="Enable MASA integration")
+    variant("masa", default=False, description="Enable MASA integration")
     variant("mpi", default=True, description="Enable MPI support")
     variant("openmp", default=False, description="Enable OpenMP for CPU builds")
     variant("particles", default=True, description="Enable AMReX particles")
@@ -68,6 +68,7 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     for arch in CudaPackage.cuda_arch_values:
         depends_on("ascent+cuda cuda_arch=%s" % arch, when="+ascent+cuda cuda_arch=%s" % arch)
 
+    conflicts("+masa", when="+cuda")
     conflicts("+openmp", when="+cuda")
     conflicts("+openmp", when="+rocm")
     conflicts("+openmp", when="+sycl")
