@@ -5,10 +5,14 @@ spack:
   view: false
   specs:
     - pelec+hdf5+masa+particles+tiny_profile%gcc
-    - pelelmex+hdf5+particles+tiny_profile%gcc
+    - pelelmex~eb+hdf5+particles+tiny_profile%gcc
+    - pelelmex+eb+hdf5+particles+tiny_profile%gcc
     - pelec+hdf5+particles+tiny_profile+cuda cuda_arch=80 %gcc
-    - pelelmex+hdf5+particles+tiny_profile+cuda cuda_arch=80 %gcc
+    - pelelmex~eb+hdf5+particles+tiny_profile+cuda cuda_arch=80 %gcc
+    - pelelmex+eb+hdf5+particles+tiny_profile+cuda cuda_arch=80 %gcc
     - pelec+hdf5+masa+particles+tiny_profile+asan%llvm
-    - pelelmex+hdf5+particles+tiny_profile+asan%llvm
+    - pelelmex~eb+hdf5+particles+tiny_profile+asan%llvm
+    - pelelmex+eb+hdf5+particles+tiny_profile+asan%llvm
     - pelec+hdf5+masa+particles+tiny_profile%llvm
-    - pelelmex+hdf5+particles+tiny_profile%llvm
+    - pelelmex~eb+hdf5+particles+tiny_profile%llvm
+    - pelelmex+eb+hdf5+particles+tiny_profile%llvm
