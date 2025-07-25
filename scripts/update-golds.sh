@@ -29,27 +29,68 @@ cmd "cd ${MYEWM}"
 cmd "source shortcut.sh" || true
 cmd "spack env activate ${DATE}"
 
-for APP in pelec pelelmex
-do
-  GOLD_DIR=${MYGOLDS}/${APP}
+GOLD_DIR=${MYGOLDS}/pelec
 
-  #~asan%llvm
-  SPEC=${APP}~asan%llvm
-  GOLD_SPEC_DIR=clang-cpu
-  copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+#~asan%llvm
+SPEC=pelec~asan%llvm
+GOLD_SPEC_DIR=clang-cpu
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
 
-  #+asan%llvm
-  SPEC=${APP}+asan%llvm
-  GOLD_SPEC_DIR=clang-cpu-asan
-  copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+#+asan%llvm
+SPEC=pelec+asan%llvm
+GOLD_SPEC_DIR=clang-cpu-asan
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
 
-  #~cuda%gcc
-  SPEC=${APP}~cuda%gcc
-  GOLD_SPEC_DIR=gcc-cpu
-  copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+#~cuda%gcc
+SPEC=pelec~cuda%gcc
+GOLD_SPEC_DIR=gcc-cpu
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
 
-  #+cuda%gcc
-  SPEC=${APP}+cuda%gcc
-  GOLD_SPEC_DIR=gcc-gpu
-  copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
-done
+#+cuda%gcc
+SPEC=pelec+cuda%gcc
+GOLD_SPEC_DIR=gcc-gpu
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+
+GOLD_DIR=${MYGOLDS}/pelelmex
+
+#~asan%llvm
+SPEC=pelelmex~eb~asan%llvm
+GOLD_SPEC_DIR=clang-cpu
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+
+#+asan%llvm
+SPEC=pelelmex~eb+asan%llvm
+GOLD_SPEC_DIR=clang-cpu-asan
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+
+#~cuda%gcc
+SPEC=pelelmex~eb~cuda%gcc
+GOLD_SPEC_DIR=gcc-cpu
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+
+#+cuda%gcc
+SPEC=pelelmex~eb+cuda%gcc
+GOLD_SPEC_DIR=gcc-gpu
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+
+GOLD_DIR=${MYGOLDS}/pelelmex
+
+#~asan%llvm
+SPEC=pelelmex+eb~asan%llvm
+GOLD_SPEC_DIR=clang-cpu-eb
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+
+#+asan%llvm
+SPEC=pelelmex+eb+asan%llvm
+GOLD_SPEC_DIR=clang-cpu-asan-eb
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+
+#~cuda%gcc
+SPEC=pelelmex+eb~cuda%gcc
+GOLD_SPEC_DIR=gcc-cpu-eb
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
+
+#+cuda%gcc
+SPEC=pelelmex+eb+cuda%gcc
+GOLD_SPEC_DIR=gcc-gpu-eb
+copy ${SPEC} ${GOLD_SPEC_DIR} ${GOLD_DIR}
