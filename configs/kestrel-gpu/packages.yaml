@@ -13,7 +13,7 @@ packages:
     buildable: false
     externals:
       - spec: "cray-mpich@8.1.32%gcc@12.2.1"
-        prefix: /projects/hpcapps/cray0425/8.1.32/mpich/8.1.32/ofi
+        prefix: /projects/hpcapps/cray0425/8.1.32/mpich/8.1.32/ofi/gnu/10.3
         modules:
           - libfabric/1.15.2.0
   cuda:
