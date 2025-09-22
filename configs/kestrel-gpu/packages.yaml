@@ -35,5 +35,6 @@ packages:
     require: "gcc@12.2.1"
   all:
     prefer:
+      - "+shared"
       - "build_type=Release"
       - "cuda_arch=90"
