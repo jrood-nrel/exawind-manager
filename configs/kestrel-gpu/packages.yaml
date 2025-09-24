@@ -1,40 +1,39 @@
 packages:
   gcc:
     externals:
-      - spec: gcc@12.2.1
-        prefix: /opt/rh/gcc-toolset-12/root/usr
+      - spec: gcc@12.3.0
+        prefix: /nopt/nrel/apps/gpu_stack/compilers/06-24/linux-rhel8-zen4/gcc-12.3.0/gcc-12.3.0-bwbarmbu4cyrk36bzl62iteel6dnsr5r
         extra_attributes:
           compilers:
-            c: /opt/rh/gcc-toolset-12/root/usr/bin/gcc
-            cxx: /opt/rh/gcc-toolset-12/root/usr/bin/g++
-            fortran: /opt/rh/gcc-toolset-12/root/usr/bin/gfortran
+            c: /nopt/nrel/apps/gpu_stack/compilers/06-24/linux-rhel8-zen4/gcc-12.3.0/gcc-12.3.0-bwbarmbu4cyrk36bzl62iteel6dnsr5r/bin/gcc
+            cxx: /nopt/nrel/apps/gpu_stack/compilers/06-24/linux-rhel8-zen4/gcc-12.3.0/gcc-12.3.0-bwbarmbu4cyrk36bzl62iteel6dnsr5r/bin/g++
+            fortran: /nopt/nrel/apps/gpu_stack/compilers/06-24/linux-rhel8-zen4/gcc-12.3.0/gcc-12.3.0-bwbarmbu4cyrk36bzl62iteel6dnsr5r/bin/gfortran
   cray-mpich:
-    require: "@8.1.32"
+    require: "@9.0.0"
     buildable: false
     externals:
-      - spec: "cray-mpich@8.1.32%gcc@12.2.1"
-        prefix: /projects/hpcapps/cray0425/8.1.32/mpich/8.1.32/ofi/gnu/10.3
+      - spec: "cray-mpich@9.0.0%gcc@12.3.0"
+        prefix: /kfs2/projects/hpcapps/cray0425/9.0.0/mpich-gcc
         modules:
-          - cray-mpich/8.1.32-gcc
+          - mpich_gcc
           - libfabric/1.15.2.0
   cuda:
     require: "@=12.4.1"
   boost:
     require: "@=1.80.0"
   mpi:
-    require: "cray-mpich@8.1.32"
+    require: "cray-mpich@9.0.0"
   blas:
     require: "netlib-lapack"
   lapack:
     require: "netlib-lapack"
   c:
-    require: "gcc@12.2.1"
+    require: "gcc@12.3.0"
   cxx:
-    require: "gcc@12.2.1"
+    require: "gcc@12.3.0"
   fortran:
-    require: "gcc@12.2.1"
+    require: "gcc@12.3.0"
   all:
     prefer:
-      - "+shared"
       - "build_type=Release"
       - "cuda_arch=90"
