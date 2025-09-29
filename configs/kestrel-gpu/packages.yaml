@@ -16,7 +16,7 @@ packages:
         prefix: /kfs2/projects/hpcapps/cray0425/9.0.0/mpich-gcc
         modules:
           - mpich_gcc
-          - libfabric/1.15.2.0
+          - libfabric/lnx
   cuda:
     require: "@=12.4.1"
   boost:
