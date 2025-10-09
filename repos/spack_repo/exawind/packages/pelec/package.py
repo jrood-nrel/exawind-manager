@@ -73,9 +73,6 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     conflicts("+openmp", when="+rocm")
     conflicts("+openmp", when="+sycl")
 
-    # To avoid clang warning output mixing up in cdash
-    parallel = False
-
     def setup_build_environment(self, env):
         spec = self.spec
         if spec.satisfies("+asan"):
