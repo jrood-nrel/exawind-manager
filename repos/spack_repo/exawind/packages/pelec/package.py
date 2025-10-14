@@ -21,6 +21,8 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
 
     license("BSD-3-Clause")
 
+    generator = ninja
+
     version("main", branch="development", submodules=True)
 
     variant("asan", default=False, description="Turn on address sanitizer")
