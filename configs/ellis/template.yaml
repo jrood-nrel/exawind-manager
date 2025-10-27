@@ -10,9 +10,9 @@ spack:
     - pelec+hdf5+particles+tiny_profile+cuda cuda_arch=80 %gcc
     - pelelmex~eb+hdf5+particles+tiny_profile+cuda cuda_arch=80 %gcc
     - pelelmex+eb+hdf5+particles+tiny_profile+cuda cuda_arch=80 %gcc
-    - pelec+hdf5+masa+particles+tiny_profile+asan%llvm
-    - pelelmex~eb+hdf5+particles+tiny_profile+asan%llvm
-    - pelelmex+eb+hdf5+particles+tiny_profile+asan%llvm
+    - pelec+hdf5+masa+particles+tiny_profile+asan build_type=Debug %llvm
+    - pelelmex~eb+hdf5+particles+tiny_profile+asan build_type=Debug %llvm
+    - pelelmex+eb+hdf5+particles+tiny_profile+asan build_type=Debug %llvm
     - pelec+hdf5+masa+particles+tiny_profile%llvm
     - pelelmex~eb+hdf5+particles+tiny_profile%llvm
     - pelelmex+eb+hdf5+particles+tiny_profile%llvm
