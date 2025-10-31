@@ -63,7 +63,7 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     depends_on("ascent~mpi", when="+ascent~mpi")
     depends_on("ascent+mpi", when="+ascent+mpi")
     depends_on("py-numpy@2:")
-    depends_on("py-pandas")
+    depends_on("py-pandas~performance")
     depends_on("py-matplotlib", when="+masa")
 
     for arch in CudaPackage.cuda_arch_values:

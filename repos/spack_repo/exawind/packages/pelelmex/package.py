@@ -67,7 +67,7 @@ class Pelelmex(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     depends_on("hypre+mpi", when="+hypre+mpi")
     depends_on("hypre+sycl", when="+hypre+sycl")
     depends_on("py-numpy@2:")
-    depends_on("py-pandas")
+    depends_on("py-pandas~performance")
 
     for arch in CudaPackage.cuda_arch_values:
         depends_on("ascent+cuda cuda_arch=%s" % arch, when="+ascent+cuda cuda_arch=%s" % arch)
