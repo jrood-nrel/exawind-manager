@@ -56,9 +56,6 @@ class Pelelmex(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     depends_on("c", type="build")
     depends_on("cxx", type="build")
     depends_on("mpi", when="+mpi")
-    depends_on("py-nose")
-    depends_on("py-numpy")
-    depends_on("py-pandas")
     depends_on("hdf5~mpi", when="+hdf5~mpi")
     depends_on("hdf5+mpi", when="+hdf5+mpi")
     depends_on("hdf5@:1.14.4-3", when="+hdf5")
@@ -69,6 +66,8 @@ class Pelelmex(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
     depends_on("hypre@2.20.0:", when="+hypre")
     depends_on("hypre+mpi", when="+hypre+mpi")
     depends_on("hypre+sycl", when="+hypre+sycl")
+    depends_on("py-numpy@2:")
+    depends_on("py-pandas")
 
     for arch in CudaPackage.cuda_arch_values:
         depends_on("ascent+cuda cuda_arch=%s" % arch, when="+ascent+cuda cuda_arch=%s" % arch)
