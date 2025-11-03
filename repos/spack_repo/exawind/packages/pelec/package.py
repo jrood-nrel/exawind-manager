@@ -105,6 +105,7 @@ class Pelec(CtestPackage, CMakePackage, CudaPackage, ROCmPackage):
             self.define_from_variant("PELE_PRECISION", "precision"),
             self.define_from_variant("PELE_ENABLE_CLANG_TIDY", "clangtidy"),
             self.define_from_variant("PELE_ENABLE_HIP", "rocm"),
+            self.define_from_variant("PELE_ENABLE_SANITIZE_FOR_TESTS", "asan"),
         ]
 
         if spec.satisfies("+mpi"):
